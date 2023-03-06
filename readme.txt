@@ -4,4 +4,4 @@ Instrucciones para hacer peticiones :
 
 2- Relizar peticiones específicas a la API de OpenAI
 
-3- Envía la solicitud y espera la respuesta de la API
+3- Envíar la solicitud y esperar la respuesta de la API
