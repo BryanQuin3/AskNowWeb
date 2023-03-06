@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="./img/icono.png">
+    <title>Ask Now Web</title>
+</head>
+<body>
+    <main class="main">
+        <h1 class="main__titulo titulo">Ask Now Web</h1>
+          <div class="form__group field">
+              <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+              <label for="name" class="form__label label">Solicitud</label>
+          </div>
+          <div class="button-container">
+              <a class="btn button" onclick="obtenerTexto()"><span>Generar Texto</span></a>
+          </div>  
+      </main>
+      <div class="container">
+          <div class="card card--large">
+              <div class="card__info info">
+                <p class="info__title paragraph"></p>
+              </div>
+          </div>
+      </div>  
+</body>
+</html>

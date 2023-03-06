@@ -1,0 +1,231 @@
+:root{
+    --primary: #11998e;
+    --primaryLight: #22cabc;
+    --secondary: #38ef7d;
+    --white: #fff;
+    --gray: #9b9b9b;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--gray);
+  outline: 0;
+  font-size: 1.3rem;
+  color: var(--white);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+    color: transparent;
+  }
+
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight:700;    
+  }
+  .form__field:focus{
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, var(--primary),var(--secondary));
+  border-image-slice: 1;
+}
+.form__field:required{
+    box-shadow:none;
+}
+.form__field:invalid{
+    box-shadow:none;
+}
+body {
+  font-family: 'Poppins', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color:#222222;
+}
+
+
+.button-container {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.btn {
+  display: block;
+  height: 50px;
+  width: 186px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--white);
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+} 
+.btn:hover{
+  background: linear-gradient(to right, var(--primaryLight), var(--secondary));
+}
+.btn:after {
+    position: absolute;
+    content:'';
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary),var(--secondary));
+    height: 50px;
+    width: 372px;
+    z-index: -1;
+    transform: translateX(-280px);
+    transition: transform 400ms ease-in;
+  }
+  
+.btn:after {
+    transform: translateX(-200px);
+  }
+span {
+    position: relative;
+    top: 16px;
+}
+.titulo{
+  background: linear-gradient(to right, var(--primaryLight), var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+main{
+  margin-top: 20px;
+}
+.container{
+  width: 50%;
+}
+
+.card {
+  --background: linear-gradient(to left,var(--primaryLight), var(--secondary));
+  border-radius: 10px;
+  min-height: 230px;
+  margin-top: 100px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+ }
+ 
+ .card::after {
+  position: absolute;
+ content: "";
+ top: 10px;
+ left: 0;
+ right: 0;
+ z-index: -1;
+ height: 100%;
+ width: 100%;
+ transform: scale(0.8);
+ filter: blur(25px);
+ background: var(--background);
+ transition: opacity .5s;
+ }
+ 
+ .card__info {
+  --color: #181818;
+  background: var(--color);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 230px;
+  overflow:visible;
+  border-radius: .7rem;
+ }
+ 
+ .info__title{
+  max-width: 95%;
+  letter-spacing: .05em;
+  font-size: 20px;
+ }
+ .card:hover::after {
+  opacity: 0;
+ }
+@media (max-width: 620px) {
+  .text{
+      margin-top: 100px;
+      min-width: 70%;
+  }
+  .titulo{
+    font-size: 35px;
+  }
+  .form__group{
+    margin-left: 25px;
+  }
+  .btn{
+    margin-left: 25px;
+  }
+  .container{
+    width: 100%;
+    max-width: 90%;
+  }
+}
+@media(max-width: 285px){
+  .btn{
+    height: 45px;
+    width: 135px;
+    font-size: 12px;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1rem;
+  }
+
+}
+@media (min-width: 621px) {
+  .container {
+    width: 100%;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 100%;
+    max-width: 50%;
+  }
+}
+
+ 
+ 
