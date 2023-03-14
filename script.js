@@ -1,5 +1,5 @@
 //poner aqui la api key
-const API_KEY = '${{ secrets.API_KEY }}';
+const API_KEY = '';
 
 async function obtenerTexto(tema) {
     const response = await fetch('https://api.openai.com/v1/engines/text-davinci-002/completions', {
